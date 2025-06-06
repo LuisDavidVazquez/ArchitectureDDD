@@ -1,12 +1,12 @@
-import express from 'express'; // Ejemplo con Express
+import express from "express";
+import perfilRoutes from "./src/infrastructure/http/routes/perfil.routes";  
 
 const app = express();
 const PORT = 3000;
 
-app.get('/', (req, res) => {
-  res.send('¡Hola desde TypeScript + Node.js!');
-});
+app.use(express.json());
+app.use("/api", perfilRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
