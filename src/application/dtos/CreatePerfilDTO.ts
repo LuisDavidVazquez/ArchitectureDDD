@@ -1,7 +1,0 @@
-export interface CreatePerfilDTO {
-    usuarioId: string;
-    nombre: string;
-    tipo: 'Niño' | 'Adulto';
-    pin?: string;
-  }
-  
